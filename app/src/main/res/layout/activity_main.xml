@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/nametag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="100dp"
+        android:text="이       름"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/agetag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="200dp"
+        android:text="나       이"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/birthdaytag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/nametag"
+        android:layout_marginBottom="200dp"
+        android:text="생년월일"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_alignBaseline="@+id/nametag"
+        android:layout_toEndOf="@+id/birthdaytag"
+        android:hint="홍길동"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/agetag"
+        android:layout_toEndOf="@+id/birthdaytag"
+        android:ems="10"
+        android:hint="25"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/birthdaytag"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-200dp"
+        android:onClick="onBirthdayClicked" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:text="저장" />
+
+</RelativeLayout>
